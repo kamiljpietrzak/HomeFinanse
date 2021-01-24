@@ -5,19 +5,12 @@ import java.util.Date;
 
 public class CreateNewMoneyAction {
 
-    ActionType actionType;
     String name;
     Float amountOfMoney;
     Date date;
     Boolean status;
+    String info;
 
-    public ActionType getActionType() {
-        return actionType;
-    }
-
-    public void setActionType(ActionType actionType) {
-        this.actionType = actionType;
-    }
 
     public String getName() {
         return name;
@@ -49,6 +42,14 @@ public class CreateNewMoneyAction {
     @NotEmpty
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
     }
 
     }

@@ -1,6 +1,9 @@
 package pl.bubkovsky.HomeFinanse.service;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import pl.bubkovsky.HomeFinanse.model.MoneyAction;
 
-public interface MoneyActionRepository extends JpaRepository {
+@Repository
+public interface MoneyActionRepository extends JpaRepository<MoneyAction, Long> {
 }

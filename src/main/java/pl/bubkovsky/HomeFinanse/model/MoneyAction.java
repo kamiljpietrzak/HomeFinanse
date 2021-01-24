@@ -9,21 +9,21 @@ public class MoneyAction {
     @Id
     @GeneratedValue
     Long id;
-    ActionType actionType;
     String name;
     Float amountOfMoney;
     Date date;
     Boolean status;
+    String info;
 
     public MoneyAction() {
     }
 
-    public MoneyAction(ActionType actionType, String name, Float amountOfMoney, Date date, Boolean status) {
-        this.actionType = actionType;
+    public MoneyAction(String name, Float amountOfMoney, Date date, Boolean status, String info) {
         this.name = name;
         this.amountOfMoney = amountOfMoney;
         this.date = date;
         this.status = status;
+        this.info = info;
     }
 
     public Long getId() {
@@ -32,14 +32,6 @@ public class MoneyAction {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public ActionType getActionType() {
-        return actionType;
-    }
-
-    public void setActionType(ActionType actionType) {
-        this.actionType = actionType;
     }
 
     public String getName() {
@@ -71,5 +63,13 @@ public class MoneyAction {
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
     }
 }
